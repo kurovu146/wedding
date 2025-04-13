@@ -1,0 +1,134 @@
+body {
+  font-family: 'Montserrat', sans-serif;
+  color: #2c3e50;
+  background-color: #f9f9f9;
+  line-height: 1.6;
+}
+.playfair {
+  font-family: 'Playfair Display', serif;
+}
+.section {
+  position: relative;
+  overflow: hidden;
+  padding: 5rem 0;
+}
+.leaf-decor-left {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 150px;
+  background-image: url('https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/leaf-border-left.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 0;
+}
+.leaf-decor-right {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 150px;
+  background-image: url('https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/leaf-border-right.png');
+  background-repeat: repeat-y;
+  background-size: contain;
+  opacity: 0.5;
+  z-index: 0;
+}
+.content {
+  position: relative;
+  z-index: 1;
+}
+.header {
+  background-color: rgba(231, 246, 242, 0.8);
+  padding: 2rem 0;
+  text-align: center;
+  position: relative;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/green-watercolor.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.2;
+  z-index: -1;
+}
+.couple-photo {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #ffffff;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 20px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #4CAF50;
+}
+.timeline-item::after {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 20px;
+  height: calc(100% + 10px);
+  width: 1px;
+  background-color: #4CAF50;
+}
+.timeline-item:last-child::after {
+  display: none;
+}
+.gallery-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.gallery-img:hover {
+  transform: scale(1.03);
+}
+.border-green {
+  border-color: #4CAF50;
+}
+.text-green {
+  color: #4CAF50;
+}
+.bg-light-green {
+  background-color: rgba(76, 175, 80, 0.1);
+}
+.divider {
+  height: 2px;
+  width: 150px;
+  background-color: #4CAF50;
+  margin: 1.5rem auto;
+}
+.btn-rsvp {
+  background-color: #4CAF50;
+  color: white;
+  padding: 0.75rem 2rem;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 500;
+}
+.btn-rsvp:hover {
+  background-color: #388E3C;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
