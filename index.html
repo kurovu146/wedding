@@ -3,303 +3,241 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thiệp Cưới - Chủ Đề Thiên Nhiên</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <title>Thiệp Cưới - Đức Tuấn & Tú Quyên</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/google-fonts@1.0.0/montserrat.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/google-fonts@1.0.0/playfairdisplay.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <!-- Music Player -->
+    <div id="musicControl" class="music-control">
+        <i class="fas fa-music"></i>
+    </div>
+    <audio id="bgMusic" loop>
+        <source src="assets/audio/MotNha-DaLAB-5798631.mp3" type="audio/mp3">
+    </audio>
+
     <!-- Header Section -->
-    <div class="header section">
-        <div class="leaf-decor-left"></div>
-        <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <div class="text-center">
-                <h3 class="text-2xl text-green-700 mb-2">Trân trọng kính mời</h3>
-                <h1 class="playfair text-5xl md:text-6xl font-bold mb-4">Đức Tuấn & Tú Quyên</h1>
-                <p class="text-xl mb-6">Cùng chung vui trong ngày trọng đại của chúng tôi</p>
-                <div class="divider"></div>
-                <p class="text-2xl mb-2">13.07.2025</p>
-                <a href="#rsvp" class="btn-rsvp mt-6">XÁC NHẬN THAM DỰ</a>
+    <section class="header-section">
+        <div class="header-content" data-aos="fade-up" data-aos-duration="1000">
+            <h3 class="text-xl md:text-2xl mb-4 playfair">Trân trọng kính mời</h3>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 playfair">Đức Tuấn & Tú Quyên</h1>
+            <p class="text-lg md:text-xl mb-8">Cùng chung vui trong ngày trọng đại của chúng tôi</p>
+            <h2 class="text-2xl md:text-4xl mb-12">13.07.2025</h2>
+            <a href="#rsvp" class="btn-primary">XÁC NHẬN THAM DỰ</a>
+        </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="section bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl text-center mb-8 playfair" data-aos="fade-up">Đếm ngược đến ngày trọng đại</h2>
+            <div class="countdown" data-aos="fade-up" data-aos-delay="100">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-days">00</span>
+                    <span class="countdown-label">Ngày</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-hours">00</span>
+                    <span class="countdown-label">Giờ</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-minutes">00</span>
+                    <span class="countdown-label">Phút</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-seconds">00</span>
+                    <span class="countdown-label">Giây</span>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Couple Section -->
-    <div class="section bg-white">
+    <section id="couple" class="section couple-section">
         <div class="leaf-decor-left"></div>
         <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-12">Cô Dâu & Chú Rể</h2>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl text-center mb-12 playfair" data-aos="fade-up">Cô Dâu & Chú Rể</h2>
             <div class="flex flex-col md:flex-row justify-center items-center gap-12">
-                <div class="text-center w-full md:w-1/2 max-w-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/groom.jpg" alt="Chú Rể" class="couple-photo mx-auto mb-6">
-                    <h3 class="playfair text-3xl font-bold text-green-700 mb-2">Đức Tuấn</h3>
+                <div class="md:w-1/2 text-center" data-aos="fade-right">
+                    <div class="mb-6 rounded-full overflow-hidden w-64 h-64 mx-auto">
+                        <img src="assets/img/1744273385403frame.jpeg" alt="Chú Rể" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 playfair">Đức Tuấn</h3>
                     <p class="text-gray-600 mb-4">14/06/2000</p>
-                    <p class="text-gray-700 mb-4">
-                        Tên thật là Đặng Đức Tuấn hay trên mạng xã hội được biết đến cái tên Shen, hiện đang kinh doanh online. 
-                        Chú rể còn được biết đến như 1 KOL / Influencer và nhiều clip hài/ trolls trên các kênh mạng xã hội. 
-                        Chú rể là người cởi mở, thân thiện và thuộc tuýp người hướng ngoại.
-                    </p>
+                    <p class="text-gray-800">Tên thật là Đặng Đức Tuấn hay trên mạng xã hội được biết đến cái tên Shen, hiện đang kinh doanh online. Chú rể còn được biết đến như 1 KOL / Influencer và nhiều clip hài/ trolls trên các kênh mạng xã hội. Chú rể là người cởi mở, thân thiện và thuộc tuýp người hướng ngoại.</p>
                 </div>
-                <div class="text-center w-full md:w-1/2 max-w-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/bride.jpg" alt="Cô Dâu" class="couple-photo mx-auto mb-6">
-                    <h3 class="playfair text-3xl font-bold text-green-700 mb-2">Tú Quyên</h3>
+                <div class="md:w-1/2 text-center" data-aos="fade-left">
+                    <div class="mb-6 rounded-full overflow-hidden w-64 h-64 mx-auto">
+                        <img src="assets/img/470503845_2476365982780587_4321739593327652788_n.jpg" alt="Cô Dâu" class="w-full h-full object-cover">
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2 playfair">Tú Quyên</h3>
                     <p class="text-gray-600 mb-4">15/12/2002</p>
-                    <p class="text-gray-700 mb-4">
-                        Kinh doanh trong lĩnh vực làm đẹp, chăm sóc sức khỏe. Khác với chú rể, cô dâu thuộc tuýp người hướng nội, 
-                        đi du học từ nhỏ nên không có nhiều bạn bè. Ngoài ra, cô dâu còn là giám đốc điều hành trong chuỗi khách sạn 4 sao của gia đình. 
-                        Sở thích nấu nướng và đi du lịch cùng gia đình.
-                    </p>
+                    <p class="text-gray-800">Kinh doanh trong lĩnh vực làm đẹp, chăm sóc sức khỏe. Khác với chú rể, cô dâu thuộc tuýp người hướng nội, đi du học từ nhỏ nên không có nhiều bạn bè. Ngoài ra, cô dâu còn là giám đốc điều hành trong chuỗi khách sạn 4 sao của gia đình. Sở thích nấu nướng và đi du lịch cùng gia đình.</p>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Love Story Section -->
-    <!-- <div class="section bg-light-green">
-        <div class="leaf-decor-left"></div>
-        <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-12">Câu Chuyện Tình Yêu</h2>
+    <!-- Story Section -->
+    <section id="story" class="section story-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl text-center mb-12 playfair" data-aos="fade-up">Câu Chuyện Tình Yêu</h2>
             <div class="max-w-3xl mx-auto">
-                <div class="timeline-item">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-2">Lần Đầu Gặp Gỡ</h3>
-                    <p class="text-gray-700 mb-2">12.05.2020</p>
-                    <p class="text-gray-700">
-                        Chúng tôi gặp nhau lần đầu tại một sự kiện từ thiện ở Hà Nội. Ánh mắt đầu tiên đã khiến cả hai đều cảm nhận được điều gì đó đặc biệt.
-                    </p>
+                <div class="timeline-item" data-aos="fade-up">
+                    <h3 class="text-2xl font-bold mb-2 playfair">Gặp Gỡ</h3>
+                    <p class="text-gray-800">Chúng tôi gặp nhau lần đầu tại một buổi gặp mặt của bạn bè chung. Ngay từ ánh nhìn đầu tiên, chúng tôi đã có cảm tình đặc biệt dành cho nhau.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-2">Bắt Đầu Hẹn Hò</h3>
-                    <p class="text-gray-700 mb-2">30.07.2020</p>
-                    <p class="text-gray-700">
-                        Sau nhiều lần gặp gỡ và trò chuyện, chúng tôi chính thức bắt đầu mối quan hệ của mình trong một buổi hẹn hò lãng mạn bên bờ Hồ Tây.
-                    </p>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="text-2xl font-bold mb-2 playfair">Hẹn Hò</h3>
+                    <p class="text-gray-800">Sau nhiều lần trò chuyện, chúng tôi quyết định tìm hiểu nhau nhiều hơn. Mỗi buổi hẹn hò đều mang đến niềm vui và sự gắn kết đặc biệt.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-2">Chuyến Du Lịch Đầu Tiên</h3>
-                    <p class="text-gray-700 mb-2">15.03.2021</p>
-                    <p class="text-gray-700">
-                        Kỷ niệm tình yêu đáng nhớ với chuyến du lịch đầu tiên cùng nhau đến Đà Nẵng. Chúng tôi đã có những khoảnh khắc tuyệt vời bên bờ biển.
-                    </p>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+                    <h3 class="text-2xl font-bold mb-2 playfair">Tỏ Tình</h3>
+                    <p class="text-gray-800">Trong một chuyến du lịch đến Đà Lạt, dưới bầu trời đầy sao, Tuấn đã ngỏ lời yêu Quyên và nhận được cái gật đầu ngọt ngào.</p>
                 </div>
-                <div class="timeline-item">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-2">Lời Cầu Hôn</h3>
-                    <p class="text-gray-700 mb-2">20.02.2024</p>
-                    <p class="text-gray-700">
-                        Trong một buổi tối dưới ánh trăng và giữa rừng hoa, anh Trung đã quỳ gối cầu hôn và chị Hằng đã nói "Vâng, em đồng ý!".
-                    </p>
+                <div class="timeline-item" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="text-2xl font-bold mb-2 playfair">Cầu Hôn</h3>
+                    <p class="text-gray-800">Sau 3 năm bên nhau, Tuấn đã chuẩn bị một buổi cầu hôn bất ngờ tại nhà hàng yêu thích của Quyên với sự chứng kiến của gia đình và bạn bè thân thiết.</p>
                 </div>
             </div>
         </div>
-    </div> -->
+    </section>
 
-    <!-- Event Details Section -->
-    <div class="section bg-white">
+    <!-- Event Section -->
+    <section id="event" class="section event-section">
         <div class="leaf-decor-left"></div>
         <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-12">Thời Gian & Địa Điểm</h2>
-            <div class="flex flex-col md:flex-row gap-10 justify-center items-stretch">
-                <div class="w-full md:w-1/2 max-w-md mx-auto bg-light-green rounded-lg p-8 shadow-md">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-4 text-center">Lễ Vu Quy</h3>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl text-center mb-12 playfair" data-aos="fade-up">Thời Gian & Địa Điểm</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-12">
+                <div class="md:w-1/2 bg-white rounded-lg shadow-md p-8" data-aos="fade-right">
+                    <h3 class="text-2xl font-bold mb-4 playfair text-center">Lễ Vu Quy</h3>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-calendar-alt text-green-700 text-xl mr-4"></i>
+                        <i class="fas fa-calendar-alt text-pink-500 mr-3 text-xl"></i>
                         <div>
-                            <p class="font-semibold">Ngày</p>
-                            <p>Thứ Bảy, 25.08.2024</p>
+                            <h4 class="font-bold">Ngày</h4>
+                            <p>Chủ Nhật, 13.07.2025</p>
                         </div>
                     </div>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-clock text-green-700 text-xl mr-4"></i>
+                        <i class="fas fa-map-marker-alt text-pink-500 mr-3 text-xl"></i>
                         <div>
-                            <p class="font-semibold">Thời gian</p>
-                            <p>11:00 - 13:30</p>
+                            <h4 class="font-bold">Địa điểm</h4>
+                            <p>Nhà hàng Đông Phương</p>
+                            <p>58 Nguyễn Văn Linh, Q7, TP.HCM</p>
                         </div>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-map-marker-alt text-green-700 text-xl mr-4"></i>
-                        <div>
-                            <p class="font-semibold">Địa điểm</p>
-                            <p>Nhà hàng Đông Phương, 56 Nguyễn Văn Huyên, Cầu Giấy, Hà Nội</p>
-                        </div>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <a href="https://maps.app.goo.gl/" target="_blank" class="inline-flex items-center text-green-700 hover:text-green-900">
-                            <i class="fas fa-directions mr-2"></i> Xem bản đồ
-                        </a>
                     </div>
                 </div>
-                <div class="w-full md:w-1/2 max-w-md mx-auto bg-light-green rounded-lg p-8 shadow-md">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-4 text-center">Lễ Thành Hôn</h3>
+                <div class="md:w-1/2 bg-white rounded-lg shadow-md p-8" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4 playfair text-center">Lễ Thành Hôn</h3>
                     <div class="flex items-center mb-4">
-                        <i class="fas fa-calendar-alt text-green-700 text-xl mr-4"></i>
+                        <i class="fas fa-calendar-alt text-pink-500 mr-3 text-xl"></i>
                         <div>
-                            <p class="font-semibold">Ngày</p>
-                            <p>Chủ Nhật, 26.08.2024</p>
+                            <h4 class="font-bold">Ngày</h4>
+                            <p>Chủ Nhật, 13.07.2025</p>
                         </div>
                     </div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-clock text-green-700 text-xl mr-4"></i>
+                    <div class="flex items-center">
+                        <i class="fas fa-map-marker-alt text-pink-500 mr-3 text-xl"></i>
                         <div>
-                            <p class="font-semibold">Thời gian</p>
-                            <p>18:00 - 21:00</p>
+                            <h4 class="font-bold">Địa điểm</h4>
+                            <p>Grand Palace</p>
+                            <p>142 Điện Biên Phủ, Q. Bình Thạnh, TP.HCM</p>
                         </div>
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-map-marker-alt text-green-700 text-xl mr-4"></i>
-                        <div>
-                            <p class="font-semibold">Địa điểm</p>
-                            <p>Trung tâm Hội nghị Quốc gia, 57 Phạm Hùng, Từ Liêm, Hà Nội</p>
-                        </div>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <a href="https://maps.app.goo.gl/" target="_blank" class="inline-flex items-center text-green-700 hover:text-green-900">
-                            <i class="fas fa-directions mr-2"></i> Xem bản đồ
-                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- Gallery Section -->
-    <div class="section bg-light-green">
-        <div class="leaf-decor-left"></div>
-        <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-12">Album Ảnh</h2>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding1.jpg" alt="Ảnh cưới 1" class="gallery-img">
+    <section id="gallery" class="section gallery-section">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl md:text-4xl text-center mb-12 playfair" data-aos="fade-up">Album Ảnh</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-1.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding2.jpg" alt="Ảnh cưới 2" class="gallery-img">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="100">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-2.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding3.jpg" alt="Ảnh cưới 3" class="gallery-img">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="200">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-3.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding4.jpg" alt="Ảnh cưới 4" class="gallery-img">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="300">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-4.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding5.jpg" alt="Ảnh cưới 5" class="gallery-img">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="400">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-5.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
-                <div class="overflow-hidden rounded-lg shadow-md">
-                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/wedding6.jpg" alt="Ảnh cưới 6" class="gallery-img">
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="500">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-6.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="600">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-7.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
+                </div>
+                <div class="gallery-item overflow-hidden rounded-lg" data-aos="zoom-in" data-aos-delay="700">
+                    <img src="https://cdn.jsdelivr.net/gh/RitanMihai/LIT@master/images/gallery-8.jpg" alt="Gallery Image" class="w-full h-64 object-cover">
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
     <!-- RSVP Section -->
-    <div id="rsvp" class="section bg-white">
+    <section id="rsvp" class="section rsvp-section">
         <div class="leaf-decor-left"></div>
         <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-6">Xác Nhận Tham Dự</h2>
-            <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-                Chúng tôi rất mong được đón tiếp quý vị trong ngày trọng đại này. Vui lòng xác nhận sự tham dự của quý vị trước ngày 10.08.2024.
-            </p>
-            <div class="max-w-md mx-auto bg-light-green rounded-lg p-8 shadow-md">
-                <form>
-                    <div class="mb-4">
-                        <label for="name" class="block text-gray-700 font-medium mb-2">Họ và tên</label>
-                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500">
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500">
-                    </div>
-                    <div class="mb-4">
-                        <label for="phone" class="block text-gray-700 font-medium mb-2">Số điện thoại</label>
-                        <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500">
-                    </div>
-                    <div class="mb-4">
-                        <label for="guests" class="block text-gray-700 font-medium mb-2">Số người tham dự</label>
-                        <select id="guests" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500">
-                            <option value="1">1 người</option>
-                            <option value="2">2 người</option>
-                            <option value="3">3 người</option>
-                            <option value="4">4 người</option>
-                            <option value="5">5 người</option>
-                        </select>
-                    </div>
-                    <div class="mb-4">
-                        <label class="block text-gray-700 font-medium mb-2">Sự kiện tham dự</label>
-                        <div class="flex items-center mb-2">
-                            <input type="checkbox" id="ceremony" class="mr-2">
-                            <label for="ceremony">Lễ Vu Quy (25.08.2024)</label>
-                        </div>
-                        <div class="flex items-center">
-                            <input type="checkbox" id="reception" class="mr-2">
-                            <label for="reception">Lễ Thành Hôn (26.08.2024)</label>
-                        </div>
-                    </div>
-                    <div class="mb-4">
-                        <label for="message" class="block text-gray-700 font-medium mb-2">Lời nhắn</label>
-                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-green-500"></textarea>
-                    </div>
-                    <button type="submit" class="btn-rsvp w-full">Gửi xác nhận</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Gift Registry Section -->
-    <div class="section bg-light-green">
-        <div class="leaf-decor-left"></div>
-        <div class="leaf-decor-right"></div>
-        <div class="content container mx-auto px-4">
-            <h2 class="playfair text-4xl font-bold text-center mb-6">Mừng Cưới</h2>
-            <p class="text-center text-gray-700 mb-8 max-w-2xl mx-auto">
-                Sự hiện diện của quý vị trong ngày trọng đại của chúng tôi là món quà quý giá nhất. 
-                Nếu quý vị muốn gửi mừng cưới, vui lòng tham khảo thông tin dưới đây.
-            </p>
-            <div class="flex flex-col md:flex-row gap-6 justify-center items-stretch">
-                <div class="w-full md:w-1/2 max-w-sm mx-auto bg-white rounded-lg p-6 shadow-md text-center">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-4">Chú Rể</h3>
-                    <p class="mb-2 font-medium">Đặng Đức Tuấn</p>
-                    <p class="mb-2">Ngân hàng Vietcombank</p>
-                    <p class="mb-6">STK: 0123 4567 8910</p>
-                    <div class="mx-auto w-48 h-48 bg-gray-200 flex items-center justify-center mb-4">
-                        <span class="text-gray-500">QR Code</span>
-                    </div>
+        <div class="container mx-auto px-4 relative z-10">
+            <h2 class="text-3xl md:text-4xl text-center mb-12 playfair" data-aos="fade-up">Xác Nhận Tham Dự</h2>
+            <form class="max-w-2xl mx-auto bg-white rounded-lg shadow-md p-8" data-aos="fade-up">
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 mb-2">Họ và tên</label>
+                    <input type="text" id="name" required>
                 </div>
-                <div class="w-full md:w-1/2 max-w-sm mx-auto bg-white rounded-lg p-6 shadow-md text-center">
-                    <h3 class="playfair text-2xl font-bold text-green-700 mb-4">Cô Dâu</h3>
-                    <p class="mb-2 font-medium">Nguyễn Tú Quyên</p>
-                    <p class="mb-2">Ngân hàng Techcombank</p>
-                    <p class="mb-6">STK: 9876 5432 1098</p>
-                    <div class="mx-auto w-48 h-48 bg-gray-200 flex items-center justify-center mb-4">
-                        <span class="text-gray-500">QR Code</span>
-                    </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-gray-700 mb-2">Email</label>
+                    <input type="email" id="email" required>
                 </div>
-            </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-gray-700 mb-2">Số điện thoại</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="mb-4">
+                    <label for="guests" class="block text-gray-700 mb-2">Số lượng khách tham dự</label>
+                    <input type="number" id="guests" min="1" max="10" required>
+                </div>
+                <div class="mb-6">
+                    <label for="message" class="block text-gray-700 mb-2">Lời chúc</label>
+                    <textarea id="message" rows="4"></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-primary">Gửi</button>
+                </div>
+            </form>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer Section -->
-    <div class="bg-white pt-8 pb-6">
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
-            <h2 class="playfair text-3xl font-bold text-green-700 mb-4">Đức Tuấn & Tú Quyên</h2>
-            <p class="text-gray-700 mb-6">Cảm ơn quý vị đã dành thời gian ghé thăm thiệp cưới online của chúng tôi.</p>
-            <p class="text-gray-700 mb-6">Rất mong được đón tiếp quý vị trong ngày trọng đại của chúng tôi!</p>
-            <div class="flex justify-center space-x-4 mb-6">
-                <a href="#" class="text-green-700 hover:text-green-900 text-xl">
-                    <i class="fab fa-facebook"></i>
-                </a>
-                <a href="#" class="text-green-700 hover:text-green-900 text-xl">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="#" class="text-green-700 hover:text-green-900 text-xl">
-                    <i class="fab fa-tiktok"></i>
-                </a>
+            <p class="mb-4 text-xl playfair">Đức Tuấn & Tú Quyên</p>
+            <p class="mb-2">13.07.2025</p>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="text-white hover:text-pink-300 transition duration-300"><i class="fab fa-facebook-f text-xl"></i></a>
+                <a href="#" class="text-white hover:text-pink-300 transition duration-300"><i class="fab fa-instagram text-xl"></i></a>
+                <a href="#" class="text-white hover:text-pink-300 transition duration-300"><i class="fab fa-twitter text-xl"></i></a>
             </div>
-            <p class="text-gray-500 text-sm">&copy; 2024 Đức Tuấn & Tú Quyên</p>
+            <p class="text-gray-400 text-sm">© 2025 Đức Tuấn & Tú Quyên. All Rights Reserved.</p>
         </div>
-    </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/js/all.min.js"></script>   
+    <script src="index.js"></script>
 </body>
 </html>
