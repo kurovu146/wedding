@@ -7,6 +7,80 @@ document.addEventListener('DOMContentLoaded', function() {
         mirror: true
     });
 
+    // Tạo nhiều trái tim nhỏ bay lơ lửng
+    const floatingHeartsContainer = document.querySelector('.floating-hearts');
+    for (let i = 0; i < 15; i++) {
+        createFloatingHeart(floatingHeartsContainer);
+    }
+    
+    // Hiệu ứng hover cho tên cặp đôi
+    const coupleNames = document.querySelector('.couple-names');
+    if (coupleNames) {
+        coupleNames.addEventListener('mouseover', function() {
+            this.classList.add('glowing');
+        });
+        coupleNames.addEventListener('mouseout', function() {
+            this.classList.remove('glowing');
+        });
+    }
+
+    // Hàm tạo trái tim bay
+    function createFloatingHeart(container) {
+        const heart = document.createElement('div');
+        heart.classList.add('floating-heart');
+        
+        // Tạo vị trí ngẫu nhiên
+        const posX = Math.random() * 100; // vị trí % theo chiều ngang
+        const posY = Math.random() * 100; // vị trí % theo chiều dọc
+        const size = Math.random() * 10 + 5; // kích thước 5px-15px
+        const opacity = Math.random() * 0.5 + 0.2; // độ trong suốt
+        const animDuration = Math.random() * 10 + 10; // thời gian animation
+        const delay = Math.random() * 5; // delay bắt đầu animation
+        
+        // Thiết lập style cho trái tim
+        heart.style.cssText = `
+            position: absolute;
+            left: ${posX}%;
+            top: ${posY}%;
+            width: ${size}px;
+            height: ${size}px;
+            background-color: #ff85a2;
+            opacity: ${opacity};
+            transform: rotate(-45deg);
+            animation: floatHeart ${animDuration}s infinite ease-in-out ${delay}s;
+        `;
+        
+        // Thêm pseudo elements cho trái tim
+        const style = document.createElement('style');
+        style.innerHTML = `
+            @keyframes floatHeart {
+                0%, 100% { transform: translateY(0) rotate(-45deg); }
+                50% { transform: translateY(-${Math.random() * 70 + 30}px) rotate(-45deg); }
+            }
+            
+            .floating-heart:before,
+            .floating-heart:after {
+                content: "";
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: #ff85a2;
+                border-radius: 50%;
+            }
+            
+            .floating-heart:before {
+                top: -50%;
+            }
+            
+            .floating-heart:after {
+                left: 50%;
+            }
+        `;
+        
+        document.head.appendChild(style);
+        container.appendChild(heart);
+    }
+
     // Enhanced scroll effects for reverse animation
     let scrollPos = window.pageYOffset;
     
