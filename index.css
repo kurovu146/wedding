@@ -213,23 +213,6 @@ body {
   align-items: center;
 }
 
-.name-highlight {
-  position: relative;
-  display: inline-block;
-  padding: 0 10px;
-}
-
-.name-highlight:after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 10px;
-  background-color: rgba(240, 201, 134, 0.2);
-  bottom: 5px;
-  left: 0;
-  z-index: -1;
-}
-
 .ampersand {
   font-family: 'Playfair Display', serif;
   font-size: 2.5rem;
@@ -435,6 +418,10 @@ body {
 .header-content.scrolling-up .ampersand {
   transform: scale(1.2) rotate(5deg);
   transition: all 0.8s ease;
+}
+
+.remain-date-section {
+  background-color: #f9f9f9;
 }
 
 .couple-section {
