@@ -110,6 +110,16 @@ document.addEventListener('DOMContentLoaded', function() {
         scrollPos = currentScrollPos;
     });
 
+    // Add smooth scrolling for the RSVP button
+    document.querySelector('.rsvp-fixed-btn').addEventListener('click', function(e) {
+        e.preventDefault();
+        const rsvpSection = document.querySelector('#rsvp');
+        if (rsvpSection) {
+        rsvpSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+  
+
     // Music Player Control
     const musicControl = document.getElementById('musicControl');
     const bgMusic = document.getElementById('bgMusic');

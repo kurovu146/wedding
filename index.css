@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Montserrat', sans-serif;
   color: #2c3e50;
@@ -219,6 +220,18 @@ body {
   margin: 0.5rem 0;
   color: #f0c986;
   text-shadow: 0 0 15px rgba(240, 201, 134, 0.5);
+  -webkit-text-fill-color: #f0c986;
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
 }
 
 /* Thiết kế ngày cưới */
@@ -249,18 +262,18 @@ body {
 .date-ornament:after {
   content: '♥';
   position: absolute;
-  font-size: 12px;
+  font-size: 14px;
   color: #ff85a2;
 }
 
 .date-ornament.left:after {
   right: -10px;
-  top: -6px;
+  top: -10px;
 }
 
 .date-ornament.right:after {
   left: -10px;
-  top: -6px;
+  top: -10px;
 }
 
 .wedding-date {
@@ -272,9 +285,9 @@ body {
 
 /* Định dạng văn bản */
 .elegant-heading {
-  font-weight: 300;
-  letter-spacing: 3px;
-  opacity: 0.9;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 2px;
 }
 
 .elegant-text {
@@ -421,23 +434,23 @@ body {
 }
 
 .remain-date-section {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 
 .couple-section {
-  background-color: #fff;
+  background-color: rgb(255, 133, 162, 0.1);
 }
 .story-section {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 .event-section {
-  background-color: #fff;
+  background-color: rgb(255, 133, 162, 0.1);
 }
 .gallery-section {
-  background-color: #f9f9f9;
+  background-color: #fff;
 }
 .rsvp-section {
-  background-color: #fff;
+  background-color: rgb(255, 133, 162, 0.1);
 }
 .heart-divider {
   height: 40px;
@@ -561,3 +574,43 @@ input, textarea {
   text-transform: uppercase;
   color: #ff2a6a;
 }
+
+/* Fixed Circular RSVP Button styles */
+.rsvp-fixed-btn {
+  position: fixed;
+  left: 30px;
+  bottom: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(226, 196, 181, 1); /* Match with your wedding theme color */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.rsvp-fixed-btn:hover {
+  transform: scale(1.1);
+  background-color: rgba(226, 196, 181, 0.8); /* Slightly darker on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.rsvp-fixed-btn i {
+  font-size: 24px;
+}
+
+/* Add a subtle animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.rsvp-fixed-btn {
+  animation: pulse 2s infinite;
+}
+
