@@ -25,9 +25,32 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Hàm tạo trái tim bay
+    let heartCounter = 0; // Ensure unique animations for each heart
+
+    // Pseudo elements for all floating hearts (added once)
+    const baseHeartStyle = document.createElement('style');
+    baseHeartStyle.innerHTML = `
+        .floating-heart:before,
+        .floating-heart:after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #ff85a2;
+            border-radius: 50%;
+        }
+
+        .floating-heart:before { top: -50%; }
+        .floating-heart:after { left: 50%; }
+    `;
+    document.head.appendChild(baseHeartStyle);
+
     function createFloatingHeart(container) {
         const heart = document.createElement('div');
         heart.classList.add('floating-heart');
+
+        // Unique keyframe name for each heart
+        const animName = `floatHeart${heartCounter++}`;
         
         // Tạo vị trí ngẫu nhiên
         const posX = Math.random() * 100; // vị trí % theo chiều ngang
@@ -47,33 +70,14 @@ document.addEventListener('DOMContentLoaded', function() {
             background-color: #ff85a2;
             opacity: ${opacity};
             transform: rotate(-45deg);
-            animation: floatHeart ${animDuration}s infinite ease-in-out ${delay}s;
+            animation: ${animName} ${animDuration}s infinite ease-in-out ${delay}s;
         `;
-        
-        // Thêm pseudo elements cho trái tim
+
         const style = document.createElement('style');
         style.innerHTML = `
-            @keyframes floatHeart {
+            @keyframes ${animName} {
                 0%, 100% { transform: translateY(0) rotate(-45deg); }
                 50% { transform: translateY(-${Math.random() * 70 + 30}px) rotate(-45deg); }
-            }
-            
-            .floating-heart:before,
-            .floating-heart:after {
-                content: "";
-                position: absolute;
-                width: 100%;
-                height: 100%;
-                background-color: #ff85a2;
-                border-radius: 50%;
-            }
-            
-            .floating-heart:before {
-                top: -50%;
-            }
-            
-            .floating-heart:after {
-                left: 50%;
             }
         `;
         
