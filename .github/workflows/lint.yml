@@ -1,0 +1,33 @@
+name: Lint
+
+on:
+  push:
+    paths:
+      - index.html
+      - index.css
+      - index.js
+      - .github/workflows/lint.yml
+  pull_request:
+    paths:
+      - index.html
+      - index.css
+      - index.js
+      - .github/workflows/lint.yml
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install linters
+        run: npm install -g htmlhint stylelint eslint
+      - name: Run htmlhint
+        run: htmlhint index.html
+      - name: Run stylelint
+        run: stylelint index.css
+      - name: Run eslint
+        run: eslint index.js
