@@ -73,15 +73,37 @@ document.addEventListener('DOMContentLoaded', function() {
             animation: ${animName} ${animDuration}s infinite ease-in-out ${delay}s;
         `;
 
-        const style = document.createElement('style');
-        style.innerHTML = `
-            @keyframes ${animName} {
-                0%, 100% { transform: translateY(0) rotate(-45deg); }
-                50% { transform: translateY(-${Math.random() * 70 + 30}px) rotate(-45deg); }
-            }
-        `;
-        
-        document.head.appendChild(style);
+        // Thêm pseudo elements cho trái tim chỉ một lần
+        if (!document.getElementById('floating-heart-style')) {
+            const style = document.createElement('style');
+            style.id = 'floating-heart-style';
+            style.innerHTML = `
+                @keyframes floatHeart {
+                    0%, 100% { transform: translateY(0) rotate(-45deg); }
+                    50% { transform: translateY(-${Math.random() * 70 + 30}px) rotate(-45deg); }
+                }
+
+                .floating-heart:before,
+                .floating-heart:after {
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: #ff85a2;
+                    border-radius: 50%;
+                }
+
+                .floating-heart:before {
+                    top: -50%;
+                }
+
+                .floating-heart:after {
+                    left: 50%;
+                }
+            `;
+
+            document.head.appendChild(style);
+        }
         container.appendChild(heart);
     }
 
